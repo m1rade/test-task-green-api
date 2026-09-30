@@ -5,6 +5,8 @@
 
 ### Это тестовое задание на позицию «Фронтенд разработчик React».
 
+Демо: https://test-task-green-api-pearl.vercel.app/
+
 <p>
   <img src="docs/screenshots/login-dark.png" alt="Страница логина" width="100%">
   <img src="docs/screenshots/active-chat-dark.png" alt="Открытый диалог с перепиской" width="100%">
@@ -22,7 +24,7 @@
 - Добавлена поддержка уведомления для отслеживания статуса инстанса. Если `stateInstance` будет `notAuthorized`, то пользователя немедленно разлогинит из приложения.
 
 ## Как пользоваться
-1. Перейти по [ссылке]() или запустить локальную версию. Ввести данные `apiUrl`, `idInstance` и `apiTokenInstance` из личного кабинета [GREEN-API](https://console.green-api.com/) (инстанс должен быть авторизован). 
+1. Перейти по [ссылке](https://test-task-green-api-pearl.vercel.app/) или запустить локальную версию. Ввести данные `apiUrl`, `idInstance` и `apiTokenInstance` из личного кабинета [GREEN-API](https://console.green-api.com/) (инстанс должен быть авторизован). 
 2. Ввести номер получателя в международном формате (поддерживается 8 для российских номеров) или выбрать диалог из списка слева.
 3. Напишите сообщение в чате.
 4. Получатель должен ответить с телефона в WhatsApp, тогда сообщение появится в диалоговом окне.
@@ -33,7 +35,7 @@
 
 1. Склонировать или скачать репозиторий.
 ```bash
-git clone <URL репозитория>
+git clone https://github.com/m1rade/test-task-green-api.git
 cd test-task-green-api
 ```
 2. Установить зависимости.
