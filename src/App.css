@@ -1,0 +1,44 @@
+.auth-container {
+  height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container {
+  display: flex;
+  height: 100svh;
+  overflow: hidden;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  width: clamp(340px, 31%, 620px);
+  border-right: 1px solid var(--color-border);
+  background: var(--color-bg-panel);
+}
+
+.chat-window {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  background: var(--color-bg-content);
+}
+
+.chat-window-empty {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.chat-placeholder {
+  color: var(--color-text-secondary);
+}

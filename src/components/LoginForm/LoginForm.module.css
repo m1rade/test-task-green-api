@@ -1,0 +1,117 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 400px;
+  padding: 32px;
+  border-radius: 12px;
+  background: var(--color-bg-panel);
+  box-shadow: var(--shadow-panel);
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.description {
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: start;
+  color: var(--color-text-secondary);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  position: relative;
+  width: fit-content;
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+
+.input {
+  padding: 10px 12px;
+  border: 1px solid var(--color-border-input);
+  background: var(--color-bg-input);
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.input:focus-visible {
+  border-color: var(--color-accent);
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+}
+
+.inputWrapper .input {
+  flex: 1;
+  min-width: 0;
+}
+
+.inputWithAction {
+  padding-right: 44px;
+}
+
+.field:has(*:is(input):required) > span::after {
+  position: absolute;
+  content: '*';
+  color: var(--color-error);
+  right: -10px;
+}
+
+.visibilityToggle {
+  position: absolute;
+  top: 50%;
+  right: 6px;
+  display: grid;
+  place-items: center;
+  padding: 6px;
+  border-radius: 6px;
+  color: var(--color-icon);
+  transform: translateY(-50%);
+  transition: color 0.15s;
+}
+
+.visibilityToggle:hover {
+  color: var(--color-icon-hover);
+}
+
+.visibilityToggle:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 1px;
+}
+
+.error {
+  font-size: 0.875rem;
+  color: var(--color-error);
+}
+
+.submit {
+  margin-top: 8px;
+  padding: 12px;
+  border-radius: 8px;
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+  font-weight: 600;
+  transition: background-color 0.15s;
+}
+
+.submit:hover:not(:disabled) {
+  background: var(--color-accent-hover);
+}
+
+.submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

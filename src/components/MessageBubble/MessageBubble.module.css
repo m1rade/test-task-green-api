@@ -1,0 +1,120 @@
+.row {
+  display: flex;
+  flex-direction: column;
+  padding: 1px 0;
+}
+
+/* Extra space between groups of messages from different sides */
+.rowFirst {
+  margin-top: 10px;
+}
+
+.rowIncoming {
+  align-items: flex-start;
+}
+
+.rowOutgoing {
+  align-items: flex-end;
+}
+
+.bubble {
+  position: relative;
+  max-width: min(65%, 560px);
+  padding: 6px 7px 8px 9px;
+  border-radius: 8px;
+  font-size: 0.9375rem;
+  line-height: 1.35;
+  color: var(--color-text-primary);
+  box-shadow: var(--shadow-bubble);
+}
+
+.incoming {
+  background: var(--color-bubble-in);
+}
+
+.outgoing {
+  background: var(--color-bubble-out);
+}
+
+/* Tail: a small triangle at the top corner, like in WhatsApp */
+.withTail.incoming {
+  border-top-left-radius: 0;
+}
+
+.withTail.outgoing {
+  border-top-right-radius: 0;
+}
+
+.withTail::before {
+  position: absolute;
+  top: 0;
+  width: 8px;
+  height: 13px;
+  content: '';
+  background: inherit;
+}
+
+.withTail.incoming::before {
+  left: -7px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+}
+
+.withTail.outgoing::before {
+  right: -7px;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+.sender {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--color-accent);
+}
+
+.text {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.metaSpacer {
+  display: inline-block;
+  visibility: hidden;
+  padding-left: 12px;
+  font-size: 0.6875rem;
+}
+
+.statusSpacer {
+  display: inline-block;
+  width: 20px;
+}
+
+.meta {
+  position: absolute;
+  right: 7px;
+  bottom: 3px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 0.6875rem;
+  line-height: 15px;
+  color: var(--color-bubble-meta);
+}
+
+.status {
+  display: inline-flex;
+}
+
+.statusRead {
+  color: var(--color-read-check);
+}
+
+.statusError {
+  color: var(--color-error);
+}
+
+.error {
+  margin-top: 2px;
+  font-size: 0.75rem;
+  color: var(--color-error);
+}
